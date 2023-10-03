@@ -45,6 +45,20 @@ public class User {
         this.lastName = lastName;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", photos='" + photos + '\'' +
+                ", enabled=" + enabled +
+                ", roles=" + roles +
+                '}';
+    }
+
     public void addRole(Role role) {
         this.roles.add(role);
     }

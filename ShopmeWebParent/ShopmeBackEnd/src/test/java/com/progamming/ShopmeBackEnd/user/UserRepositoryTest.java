@@ -44,4 +44,14 @@ public class UserRepositoryTest {
         List<User> userList = userRepository.findAll();
         Assertions.assertThat(userList.size()).isEqualTo(2);
     }
+    @Test
+    public void testUpdateRoles() {
+        User user = userRepository.findById(2).get();
+        Role roleEditor = new Role(3);
+        Role roleSalesperson = new Role(2);
+
+        user.getRoles().remove(roleEditor);
+//        user.addRole(roleSalesperson);
+        userRepository.save(user);
+    }
 }
